@@ -7,7 +7,7 @@ This project was created to demonstrate how to use helm test.
 ### awesome_app
 
 This is my awesome application that reads a message from a Redis PubSub and 
-adds it 10 to its value. It assumes messages are integer numbers.
+adds 10 to its value. It assumes messages are integer numbers.
 
 ### tester_helm
 
