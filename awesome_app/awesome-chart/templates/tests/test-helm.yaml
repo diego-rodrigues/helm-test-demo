@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "awesome-chart.fullname" . }}-test-helm"
+  labels:
+    {{- include "awesome-chart.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: "helm-tester"
+      image: helm-tester:0.0.1
+      env:
+        - name: REDIS_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: redishost
+              key: REDIS_HOST
+        - name: REDIS_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: redishost
+              key: REDIS_PORT
+
+  restartPolicy: Never
+
