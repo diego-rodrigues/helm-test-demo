@@ -37,7 +37,7 @@ def listen():
                     continue_listening = False
 
                 else:
-                    result_message = (int)(message) + 15
+                    result_message = (int)(message) + 10
                     redis_connection.publish(RESULT_CHANNEL, result_message)
                     logging.info('Sent message: {} to channel: {}.'.format(result_message, RESULT_CHANNEL))
 
