@@ -81,12 +81,12 @@ on terminal.)
     ```
 
 6. Modify `awesome_app` to be incorrect.
-    * On [app.py](awesome_app/app.py), modify the value `10` on line 36:
+    * On [app.py](awesome_app/app.py), modify the value `10` on line 40:
     ```
     result_message = (int)(message) + 10
     ```
 
-    * Update the version on the [helm chart](awesome_app/charts/Chart.yaml) (lines 17 and 21):
+    * Update the version on the [helm chart](awesome_app/awesome_chart/Chart.yaml) (lines 17 and 21):
     ```
     version: 0.0.2
     appVersion: 0.0.2
